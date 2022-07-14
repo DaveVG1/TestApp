@@ -1,4 +1,4 @@
-name: Android Build
+name: Android CI
 
 on:
   pull_request:
@@ -64,6 +64,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 32
+          emulator-build: 7425822
           script: ./gradlew connectedCheck
 
       - name: Upload tests report
